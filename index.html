@@ -16,7 +16,27 @@ input{width:100%;padding:10px;border:1px solid #d5d9e0;border-radius:9px;font-si
 button,.cta{background:var(--acc);color:#fff;border:0;border-radius:9px;padding:10px 14px;font-size:.95rem;cursor:pointer;text-decoration:none;display:inline-block}
 .cta.alt{background:#fff;color:var(--acc);border:1px solid var(--acc)}.ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 small{color:var(--mute)}footer{text-align:center;color:var(--mute);font-size:.8rem;padding:0 18px 30px}
-</style></head><body>
+</style><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%230f766e%22/%3E%3Ctext%20x%3D%2232%22%20y%3D%2244%22%20font-family%3D%22Arial%2CHelvetica%2Csans-serif%22%20font-size%3D%2236%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%20text-anchor%3D%22middle%22%3ER%3C/text%3E%3C/svg%3E"><style id="om-brand">
+:root{--om-ink:#0f172a;--om-mute:#475569;--om-line:#e2e8f0;--om-acc:#0f766e;--om-bg:#f8fafc}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.om-bar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--om-line)}
+.om-in{max-width:980px;margin:0 auto;padding:0 20px}
+.om-bar .om-in{display:flex;align-items:center;justify-content:space-between;height:56px;gap:12px}
+.om-logo{display:flex;align-items:center;gap:10px;color:var(--om-ink);text-decoration:none;font-weight:700;font-size:15px;letter-spacing:-.01em}
+.om-mark{width:26px;height:26px;border-radius:7px;background:var(--om-acc);color:#fff;display:grid;place-items:center;font-size:14px;font-weight:700}
+.om-by{color:var(--om-mute);font-weight:500;font-size:13px}
+.om-btn{display:inline-block;background:var(--om-ink);color:#fff!important;text-decoration:none;font-weight:600;font-size:14px;padding:9px 16px;border-radius:8px;white-space:nowrap}
+.om-btn:hover{background:var(--om-acc)}
+.om-trust{background:#fff;border-top:1px solid var(--om-line);margin-top:48px;padding:48px 0 8px;color:var(--om-ink)}
+.om-callout{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--om-line);border-radius:14px;padding:24px 28px;background:var(--om-bg)}
+.om-callout h2{margin:0 0 4px;font-size:20px;letter-spacing:-.015em}.om-callout p{margin:0;color:var(--om-mute)}
+.om-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin:32px 0}
+.om-grid h3{font-size:14px;margin:0 0 6px;letter-spacing:.01em}.om-grid p{margin:0;color:var(--om-mute);font-size:14px;line-height:1.55}
+.om-foot{border-top:1px solid var(--om-line);padding:20px 0 28px;color:var(--om-mute);font-size:13px;background:#fff}
+.om-foot .om-in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+@media(max-width:560px){.om-by{display:none}}
+@media print{.om-bar,.om-trust,.om-foot{display:none!important}}
+</style></head><body><div class="om-bar"><div class="om-in"><a class="om-logo" href="./"><span class="om-mark">R</span>Rate Calculator <span class="om-by">by Orvian Market</span></a><a class="om-btn" href="https://jhodges6.gumroad.com/l/lyrgdx?utm_source=calculator" target="_blank" rel="noopener">Get the spreadsheet, $12</a></div></div>
 <header><h1>Freelance Rate &amp; Quote Calculator</h1><p>Work out the rate your business needs, quote a project, and get a rate-increase email ready to send.</p></header>
 <main>
 <section><h2>1. Your numbers</h2>
@@ -91,4 +111,6 @@ ${$('yname').value}`;
 document.querySelectorAll('input').forEach(e=>e.addEventListener('input',render));
 $('copy').onclick=()=>{navigator.clipboard.writeText($('email').value);$('copy').textContent='Copied!';setTimeout(()=>$('copy').textContent='Copy email',1500)};
 render(); window.calc=calc;
-</script></body></html>
+</script><section class="om-trust" id="pricing"><div class="om-in"><div class="om-callout"><div><h2>Work out a freelance rate you can defend, in under a minute.</h2><p>Calculator is free. Spreadsheet version is $12 one time. No subscription, no seat fees.</p></div><a class="om-btn" href="https://jhodges6.gumroad.com/l/lyrgdx?utm_source=calculator" target="_blank" rel="noopener">Get the spreadsheet, $12</a></div>
+<div class="om-grid"><div><h3>Private by design</h3><p>Everything is calculated in your browser. Nothing you type is sent anywhere.</p></div><div><h3>Pay once, keep it</h3><p>One time price with no recurring billing. Updates to the version you bought are included.</p></div><div><h3>14 day refund</h3><p>If it is not right for you, request a refund through your Gumroad receipt within 14 days of purchase.</p></div></div></div></section>
+<footer class="om-foot"><div class="om-in"><span>&copy; 2026 Orvian Market. Independent software, not affiliated with any other brand.</span><span>Secure checkout by Gumroad</span></div></footer></body></html>
