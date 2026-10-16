@@ -1,13 +1,80 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Proposeroo Desk: quotes, time & invoices in your browser (preview) | Orvian Market</title>
+<title>Proposeroo Desk: time tracking & invoicing, pay once | Orvian Market</title>
 <meta name="description" content="Track time, send quotes and invoices, and get paid. Local-first, no account, pay once.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f766e'/%3E%3Ctext x='32' y='44' font-family='Arial' font-size='36' font-weight='700' fill='%23fff' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="style.css"></head>
+<link rel="stylesheet" href="style.css"><style id="om-landing">
+.om-x{--ink:#0f172a;--mute:#475569;--line:#e2e8f0;--acc:#0f766e;--acc2:#14b8a6;--bg:#f8fafc;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);line-height:1.6;text-align:left;-webkit-font-smoothing:antialiased}
+.om-x *{box-sizing:border-box}
+.om-x .w{max-width:1080px;margin:0 auto;padding:0 22px}
+.om-hero{background:radial-gradient(1200px 400px at 80% -10%,#ccfbf1 0,transparent 60%),linear-gradient(180deg,#fff,#f8fafc);border-bottom:1px solid var(--line);padding:72px 0 64px}
+.om-hero .w{display:grid;grid-template-columns:1.25fr .9fr;gap:48px;align-items:center}
+.om-eb{display:inline-block;font-size:13px;font-weight:600;color:var(--acc);background:#f0fdfa;border:1px solid #99f6e4;padding:4px 12px;border-radius:999px;margin:0 0 18px}
+.om-x .om-h1{font-size:clamp(32px,5vw,52px);line-height:1.08;letter-spacing:-.035em;font-weight:800;margin:0 0 18px;color:var(--ink)}
+.om-x .om-lead{font-size:18px;color:var(--mute);margin:0 0 28px;max-width:600px}
+.om-ctas{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.om-x a.om-b1,.om-x a.om-b2{display:inline-flex;align-items:center;gap:8px;font-weight:650;font-size:16px;padding:13px 22px;border-radius:10px;text-decoration:none;transition:transform .15s,box-shadow .15s,background .15s}
+.om-x a.om-b1{background:var(--acc);color:#fff;box-shadow:0 6px 18px -6px rgba(15,118,110,.55)}
+.om-x a.om-b1:hover{background:#115e59;transform:translateY(-1px)}
+.om-x a.om-b2{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.om-x a.om-b2:hover{border-color:#94a3b8}
+.om-x a:focus-visible{outline:3px solid var(--acc2);outline-offset:2px}
+.om-meta{display:flex;flex-wrap:wrap;gap:18px;margin-top:22px;font-size:14px;color:var(--mute)}
+.om-meta span:before{content:"\2713";color:var(--acc);font-weight:800;margin-right:6px}
+.om-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:0 24px 48px -24px rgba(15,23,42,.25)}
+.om-card .om-plan{font-weight:700;font-size:15px;margin:0}
+.om-card .om-price{font-size:44px;font-weight:800;letter-spacing:-.03em;margin:6px 0 0}
+.om-card .om-per{color:var(--mute);font-size:14px;margin:0 0 18px}
+.om-x ul.om-ck{list-style:none;padding:0;margin:0 0 22px}
+.om-x ul.om-ck li{padding:7px 0 7px 28px;position:relative;font-size:15px;border:0;display:block}
+.om-x ul.om-ck li:before{content:"";position:absolute;left:0;top:11px;width:16px;height:16px;border-radius:50%;background:#ccfbf1 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='%230f766e' stroke-width='2'/%3E%3C/svg%3E") center/16px no-repeat}
+.om-card a.om-b1{width:100%;justify-content:center}
+.om-small{font-size:13px;color:var(--mute);margin:12px 0 0;text-align:center}
+.om-demo-label{max-width:1080px;margin:40px auto 8px;padding:0 22px;font:600 13px/1 Inter,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#0f766e}
+.om-sec{padding:76px 0;border-top:1px solid var(--line);background:#fff}
+.om-sec.alt{background:var(--bg)}
+.om-x .om-h2{font-size:clamp(26px,3.4vw,36px);letter-spacing:-.025em;font-weight:800;margin:0 0 10px;line-height:1.15;color:var(--ink)}
+.om-x .om-sub{color:var(--mute);font-size:17px;margin:0 0 36px;max-width:640px}
+.om-fg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.om-f{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px}
+.om-sec.alt .om-f{background:#fff}
+.om-ic{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#0f766e,#14b8a6);color:#fff;display:grid;place-items:center;font-weight:800;margin-bottom:14px;font-size:15px}
+.om-x .om-f b{display:block;font-size:16px;margin-bottom:4px;color:var(--ink)}
+.om-x .om-f p{margin:0;color:var(--mute);font-size:15px}
+.om-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s}
+.om-step{position:relative;padding:22px 22px 22px 70px;border-radius:14px;background:#fff;border:1px solid var(--line);font-size:16px}
+.om-step:before{counter-increment:s;content:counter(s);position:absolute;left:22px;top:20px;width:32px;height:32px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:700}
+.om-x table.om-t{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;font-size:15px;margin:0}
+.om-x table.om-t th,.om-x table.om-t td{padding:14px 18px;border:0;border-bottom:1px solid var(--line);text-align:left;color:var(--ink);background:none}
+.om-x table.om-t thead th{background:#f1f5f9;font-weight:700}
+.om-x table.om-t td.us{color:var(--acc);font-weight:650}
+.om-x table.om-t tr:last-child td{border-bottom:0}
+.om-x .om-cmplink{margin:18px 0 0;font-size:15px}
+.om-x .om-cmplink a{color:var(--acc);font-weight:650}
+.om-price-wrap{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.om-guar{display:flex;gap:16px;align-items:flex-start;background:#f0fdfa;border:1px solid #99f6e4;border-radius:14px;padding:22px}
+.om-guar .om-ic{flex:none;margin:0}
+.om-x details{border-bottom:1px solid var(--line);padding:16px 0}
+.om-x summary{cursor:pointer;font-weight:650;font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:12px;color:var(--ink)}
+.om-x summary::-webkit-details-marker{display:none}
+.om-x summary:after{content:"+";color:var(--acc);font-weight:800;font-size:20px;line-height:1}
+.om-x details[open] summary:after{content:"\2212"}
+.om-x details p{margin:10px 0 0;color:var(--mute)}
+.om-maker{display:flex;gap:22px;align-items:center}
+.om-mono{flex:none;width:64px;height:64px;border-radius:16px;background:var(--acc);color:#fff;display:grid;place-items:center;font-weight:800;font-size:28px}
+.om-x .om-na{font-size:13px;color:#64748b;margin:28px 0 0}
+.om-final{text-align:center;background:linear-gradient(135deg,#0f172a,#134e4a);color:#fff;padding:72px 0}
+.om-x .om-final .om-h2{color:#fff}.om-x .om-final .om-sub{color:#cbd5e1;margin:0 auto 28px}
+@media(max-width:860px){.om-hero .w,.om-price-wrap{grid-template-columns:1fr}.om-fg,.om-steps{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.om-fg,.om-steps{grid-template-columns:1fr}.om-hero{padding:48px 0}}
+@media(prefers-reduced-motion:reduce){.om-x a{transition:none}}
+@media print{.om-x,.om-demo-label{display:none!important}}
+</style></head>
 <body>
-<div class="om-bar"><div class="om-in"><a class="om-logo" href="./"><span class="om-mark">P</span>Proposeroo Desk <span class="om-by">by Orvian Market</span></a><span class="pill">Preview · data stays in this browser</span></div></div>
-<div class="hero"><div class="om-in"><p class="eb">Quotes · Time · Invoices</p><h1>Track the time. Send the invoice. Get paid.</h1>
-<p class="lead">Everything runs in your browser on Windows, Mac or Chromebook. No account, no subscription, and nothing leaves your device unless you export it.</p></div></div>
+<div class="om-bar"><div class="om-in"><a class="om-logo" href="./"><span class="om-mark">P</span>Proposeroo Desk <span class="om-by">by Orvian Market</span></a><a href="#om-pricing" style="margin-left:auto;margin-right:14px;color:#475569;text-decoration:none;font-size:14px;font-weight:600">Pricing</a><span class="pill">Data stays in this browser</span></div></div><!--om-hero--><div class="om-x"><div class="om-hero"><div class="w"><div><p class="om-eb">Time tracking + invoicing, pay once</p><h2 class="om-h1">Track the time. Send the invoice. Get paid. No subscription.</h2><p class="om-lead">Proposeroo Desk runs in your browser on Windows, Mac or Chromebook. Import your Harvest history, invoice unbilled time in one click, and keep your data on your device.</p>
+<div class="om-ctas"><a class="om-b1" href="#om-demo">Try it free &darr;</a><a class="om-b2" href="#om-pricing" data-buy>Get Pro, $29</a></div>
+<div class="om-meta"><span>Pay once, no subscription</span><span>14-day refund</span><span>Made by Orvian Market</span></div></div><div class="om-card" aria-label="Pricing"><p class="om-plan">Proposeroo Desk Pro</p><p class="om-price">$29</p><p class="om-per">one time, lifetime v1.x updates</p><ul class="om-ck"><li>Unlimited clients</li><li>No footer on invoice PDFs</li><li>Harvest &amp; CSV import</li><li>Team of 5: $79 one time</li><li>14-day refund</li></ul><a class="om-b1" href="#om-pricing" data-buy>Get Pro, $29 &rarr;</a><p class="om-small">Secure checkout by Gumroad · 14-day refund</p></div></div></div></div>
+<p class="om-demo-label" id="om-demo">Live demo &middot; this is the real product</p><!--/om-hero-->
 <main class="om-in">
 <div class="timerbar card" aria-live="polite">
   <select id="tProject" aria-label="Project"></select><input id="tNote" placeholder="What are you working on?" aria-label="Note">
@@ -40,13 +107,14 @@
 <section id="clients" class="tab card" hidden>
   <h2>Add client</h2><form id="cForm" class="row"><input name="name" placeholder="Client name" required aria-label="Client name"><input name="email" type="email" placeholder="Email" aria-label="Email"><input name="address" placeholder="Address" aria-label="Address"><button class="b1">Add client</button></form>
   <h2>Add project</h2><form id="pForm" class="row"><select name="clientId" aria-label="Client" required></select><input name="name" placeholder="Project name" required aria-label="Project name"><input name="rate" type="number" min="0" step="0.01" placeholder="Hourly rate" required aria-label="Hourly rate"><button class="b1">Add project</button></form>
-  <div id="cList"></div>
+  <p id="clientGate" class="muted"></p><div id="cList"></div>
 </section>
 
 <section id="data" class="tab card" hidden>
   <h2>Your business</h2><form id="sForm" class="row"><input name="business" placeholder="Business name" aria-label="Business name"><input name="email" placeholder="Email" aria-label="Business email"><input name="address" placeholder="Address" aria-label="Business address"><select name="currency" aria-label="Currency"><option>USD</option><option>EUR</option><option>GBP</option><option>CAD</option><option>AUD</option></select><input name="taxPct" type="number" min="0" step="0.01" placeholder="Default tax %" aria-label="Default tax"><button class="b1">Save</button></form>
   <h2>Import time from Harvest or a CSV file</h2><p class="muted">Works with a Harvest time export and most CSV exports that have Date, Project and Hours (or Duration) columns, such as Toggl and Clockify. You'll see a preview first. Importing the same file twice adds the entries twice.</p>
   <div class="row"><label class="b2 file">Choose CSV file<input id="iCsv" type="file" accept=".csv,text/csv" hidden></label></div><div id="impPrev"></div>
+  <h2>Plan &amp; license</h2><p id="planStatus" class="muted"></p><form id="lForm" class="row"><input name="key" placeholder="License key from your Gumroad receipt" aria-label="License key" required><button class="b1">Activate</button><a id="lBuy" class="b2" href="#om-pricing" data-buy hidden>Get Pro, $29 once</a></form><button id="lDeact" class="link" hidden>Remove license from this browser</button>
   <h2>Export &amp; backup</h2><p class="muted">Your data lives only in this browser. Export a backup regularly.</p>
   <div class="row"><button id="xJson" class="b2">Download backup (JSON)</button><button id="xEntries" class="b2">Time entries (CSV)</button><button id="xInv" class="b2">Invoices (CSV)</button><label class="b2 file">Restore backup<input id="iJson" type="file" accept=".json,application/json" hidden></label><button id="demo" class="b2">Load sample data</button></div>
 </section>
@@ -54,4 +122,14 @@
 </main>
 <div id="doc" class="doc" hidden></div>
 <script type="module" src="app.js"></script>
-</body></html>
+<!--om-body--><div class="om-x">
+<div class="om-sec"><div class="w"><h2 class="om-h2">Everything you need, nothing you don't</h2><p class="om-sub">Proposeroo Desk runs in your browser on Windows, Mac or Chromebook.</p><div class="om-fg"><div class="om-f"><div class="om-ic" aria-hidden="true">✓</div><b>One-click timer</b><p>Start and stop from the top bar. It keeps running through a reload.</p></div><div class="om-f"><div class="om-ic" aria-hidden="true">⚡</div><b>Time to invoice</b><p>Turn a client&#x27;s unbilled hours into a numbered invoice in one click.</p></div><div class="om-f"><div class="om-ic" aria-hidden="true">★</div><b>Quotes to invoices</b><p>Send a quote, then convert it to an invoice when it&#x27;s accepted.</p></div><div class="om-f"><div class="om-ic" aria-hidden="true">◆</div><b>Paid and overdue tracking</b><p>See at a glance what&#x27;s paid, unpaid and overdue.</p></div><div class="om-f"><div class="om-ic" aria-hidden="true">●</div><b>Harvest &amp; CSV import</b><p>Bring in a Harvest time export or a CSV from Toggl or Clockify. Preview first.</p></div><div class="om-f"><div class="om-ic" aria-hidden="true">▲</div><b>Export everything</b><p>JSON backup and CSV exports on every plan. Your data is never locked in.</p></div></div></div></div>
+<div class="om-sec alt"><div class="w"><h2 class="om-h2">How it works</h2><p class="om-sub">Three steps. No meetings, no onboarding calls.</p><div class="om-steps"><div class="om-step">Import from Harvest or add a client.</div><div class="om-step">Track time with the timer.</div><div class="om-step">Invoice unbilled time and download the PDF.</div></div></div></div>
+<div class="om-sec"><div class="w"><h2 class="om-h2">How it compares</h2><p class="om-sub">An honest look, including where the alternatives do more.</p>
+<table class="om-t"><thead><tr><th scope="col"></th><th scope="col">Proposeroo</th><th scope="col">Typical subscription time-tracking + invoicing apps</th></tr></thead><tbody><tr><td>Pricing</td><td class=us>$29 once</td><td>Monthly fee</td></tr><tr><td>Works on Windows, Mac, Chromebook</td><td class=us>Yes, in the browser</td><td>Varies</td></tr><tr><td>Account needed</td><td class=us>No</td><td>Yes</td></tr><tr><td>Where your data lives</td><td class=us>Your device</td><td>Vendor&#x27;s servers</td></tr><tr><td>Sync between devices</td><td class=us>No, use the backup file</td><td>Usually yes</td></tr><tr><td>Bank sync / online payments</td><td class=us>No</td><td>Often yes</td></tr></tbody></table></div></div>
+<div class="om-sec alt" id="om-pricing"><div class="w"><h2 class="om-h2">Simple pricing</h2><p class="om-sub">One payment. No seats, no tiers to outgrow.</p><div class="om-price-wrap"><div class="om-card" aria-label="Pricing"><p class="om-plan">Proposeroo Desk Pro</p><p class="om-price">$29</p><p class="om-per">one time, lifetime v1.x updates</p><ul class="om-ck"><li>Unlimited clients</li><li>No footer on invoice PDFs</li><li>Harvest &amp; CSV import</li><li>Team of 5: $79 one time</li><li>14-day refund</li></ul><a class="om-b1" href="#om-pricing" data-buy>Get Pro, $29 &rarr;</a><p class="om-small">Secure checkout by Gumroad · 14-day refund</p></div>
+<div><div class="om-guar"><div class="om-ic" aria-hidden="true">✓</div><div><b>14-day refund</b><p style="margin:4px 0 0;color:#475569">Request a refund through your Gumroad receipt within 14 days of purchase. No hoops.</p></div></div>
+<div style="margin-top:22px"><details><summary>What&#x27;s free?</summary><p>Everything works on the free plan with 1 client. Invoice PDFs get a small &#x27;Made with Proposeroo Desk&#x27; footer, and CSV import shows a preview. Export and backup are always free.</p></details><details><summary>How does unlocking work?</summary><p>Your Gumroad receipt includes a license key. Paste it into Settings &amp; data. It&#x27;s checked on your device, with no account and no internet connection needed.</p></details><details><summary>Does it sync between devices?</summary><p>No. Your data stays in this browser. Move it with the backup file.</p></details><details><summary>Can I import from Harvest?</summary><p>Yes. Use Harvest&#x27;s time report CSV export. You&#x27;ll see a preview before anything is added.</p></details><details><summary>Is my data private?</summary><p>Yes. Nothing is sent anywhere. There&#x27;s no server that stores your clients or invoices.</p></details><details><summary>What if it&#x27;s not right for me?</summary><p>Request a refund through your Gumroad receipt within 14 days of purchase. No hoops.</p></details></div></div></div></div></div>
+<div class="om-sec"><div class="w"><div class="om-maker"><div class="om-mono" aria-hidden="true">O</div><div><h2 class="om-h2" style="font-size:24px">Made by Orvian Market</h2><p style="margin:0;color:#475569">A small, independent studio building simple tools you can own instead of rent. We build everything from scratch, tell you plainly what each product does and doesn't do, and stand behind it with a 14-day refund. We don't post fake reviews or made-up numbers.</p></div></div><p class="om-na">Orvian Market is independent software and is not affiliated with, endorsed by, or sponsored by any company or product named on this page. All trademarks belong to their owners.</p></div></div>
+<div class="om-final"><div class="w"><h2 class="om-h2">Track the time. Send the invoice. Get paid. No subscription.</h2><p class="om-sub">Pay once, keep it. 14-day refund through Gumroad.</p><div class="om-ctas" style="justify-content:center"><a class="om-b1" href="#om-pricing" data-buy>Get Pro, $29 &rarr;</a></div></div></div>
+</div><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What's free?", "acceptedAnswer": {"@type": "Answer", "text": "Everything works on the free plan with 1 client. Invoice PDFs get a small 'Made with Proposeroo Desk' footer, and CSV import shows a preview. Export and backup are always free."}}, {"@type": "Question", "name": "How does unlocking work?", "acceptedAnswer": {"@type": "Answer", "text": "Your Gumroad receipt includes a license key. Paste it into Settings & data. It's checked on your device, with no account and no internet connection needed."}}, {"@type": "Question", "name": "Does it sync between devices?", "acceptedAnswer": {"@type": "Answer", "text": "No. Your data stays in this browser. Move it with the backup file."}}, {"@type": "Question", "name": "Can I import from Harvest?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Use Harvest's time report CSV export. You'll see a preview before anything is added."}}, {"@type": "Question", "name": "Is my data private?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Nothing is sent anywhere. There's no server that stores your clients or invoices."}}]}</script><!--/om-body--></body></html>
