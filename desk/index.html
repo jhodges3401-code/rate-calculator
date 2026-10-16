@@ -45,6 +45,8 @@
 
 <section id="data" class="tab card" hidden>
   <h2>Your business</h2><form id="sForm" class="row"><input name="business" placeholder="Business name" aria-label="Business name"><input name="email" placeholder="Email" aria-label="Business email"><input name="address" placeholder="Address" aria-label="Business address"><select name="currency" aria-label="Currency"><option>USD</option><option>EUR</option><option>GBP</option><option>CAD</option><option>AUD</option></select><input name="taxPct" type="number" min="0" step="0.01" placeholder="Default tax %" aria-label="Default tax"><button class="b1">Save</button></form>
+  <h2>Import time from Harvest or a CSV file</h2><p class="muted">Works with a Harvest time export and most CSV exports that have Date, Project and Hours (or Duration) columns, such as Toggl and Clockify. You'll see a preview first. Importing the same file twice adds the entries twice.</p>
+  <div class="row"><label class="b2 file">Choose CSV file<input id="iCsv" type="file" accept=".csv,text/csv" hidden></label></div><div id="impPrev"></div>
   <h2>Export &amp; backup</h2><p class="muted">Your data lives only in this browser. Export a backup regularly.</p>
   <div class="row"><button id="xJson" class="b2">Download backup (JSON)</button><button id="xEntries" class="b2">Time entries (CSV)</button><button id="xInv" class="b2">Invoices (CSV)</button><label class="b2 file">Restore backup<input id="iJson" type="file" accept=".json,application/json" hidden></label><button id="demo" class="b2">Load sample data</button></div>
 </section>

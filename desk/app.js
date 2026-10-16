@@ -1,4 +1,5 @@
 import * as D from './core.js';
+import * as I from './importers.js';
 const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
 const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 let S = D.load(localStorage);
@@ -88,4 +89,12 @@ $('#demo').onclick = err(() => { if ((S.clients.length || S.entries.length) && !
   const c = D.addClient(S, { name: 'Sample Co (demo)', email: 'billing@example.com', address: '1 Example St' }); const p = D.addProject(S, { clientId: c.id, name: 'Website refresh', rate: 85 }); const p2 = D.addProject(S, { clientId: c.id, name: 'Monthly SEO', rate: 60 });
   D.addEntry(S, { projectId: p.id, minutes: 150, note: 'Homepage layout', date: D.today() }); D.addEntry(S, { projectId: p.id, minutes: 95, note: 'Client revisions', date: D.today() }); D.addEntry(S, { projectId: p2.id, minutes: 60, note: 'Keyword report', date: D.today() });
   D.makeQuote(S, { clientId: c.id, items: [{ desc: 'Landing page design', qty: 1, price: 900 }, { desc: 'Copy edits (hours)', qty: 4, price: 85 }], taxPct: 0 }); save(); });
+let PV = null;
+$('#iCsv').onchange = err(async ev => { const f = ev.target.files[0]; if (!f) return; ev.target.value = '';
+  PV = I.previewImport(await f.text());
+  $('#impPrev').innerHTML = `<div class="card" style="background:#f8fafc"><b>${PV.items.length} entries · ${(PV.totalMinutes / 60).toFixed(2)} h</b> <span class=muted>(${PV.format === 'harvest' ? 'Harvest export' : 'CSV'}${PV.errors.length ? `, ${PV.errors.length} rows skipped` : ''})</span>
+  <table><thead><tr><th>Date</th><th>Client · Project</th><th>Note</th><th class=n>Hours</th></tr></thead><tbody>${PV.items.slice(0, 8).map(x => `<tr><td>${x.date}</td><td>${esc(x.client)} · ${esc(x.project)}</td><td>${esc(x.note)}</td><td class=n>${(x.minutes / 60).toFixed(2)}</td></tr>`).join('')}</tbody></table>${PV.items.length > 8 ? `<p class=muted>…and ${PV.items.length - 8} more</p>` : ''}
+  ${PV.errors.length ? `<p class=muted>${PV.errors.slice(0, 5).map(esc).join('<br>')}</p>` : ''}<div class=row style="margin-top:10px"><button class=b1 id=impGo>Import ${PV.items.length} entries</button><button class=b2 id=impCancel>Cancel</button></div></div>`;
+  $('#impGo').onclick = err(() => { const r = I.applyImport(S, PV); PV = null; $('#impPrev').innerHTML = `<p class=muted>Imported ${r.entries} entries (${r.clients} new clients, ${r.projects} new projects). Invoiced rows were added as non-billable.</p>`; save(); });
+  $('#impCancel').onclick = () => { PV = null; $('#impPrev').innerHTML = ''; }; });
 render();
