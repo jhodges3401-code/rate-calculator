@@ -2,7 +2,8 @@
 // public key below: no accounts, no network calls. Export and backup are always free.
 export const FREE_CLIENTS = 1;
 // Swap this one line once the Gumroad product exists (e.g. 'https://jhodges6.gumroad.com/l/xxxx').
-export const BUY_URL = '';
+export const BUY_URL = 'https://jhodges6.gumroad.com/l/proposeroo-desk';
+export const TEAM_URL = 'https://jhodges6.gumroad.com/l/proposeroo-desk-team';
 const PUB = { kty: 'EC', crv: 'P-256', x: 'IC7WUotFz8aOs1U2-GAC1H2CqVJ8k7ckGJgH9WbBQsM', y: 'maGUdPDD8FEl30c76BsboEw5XreUrANAuI_m74S_UGY' };
 const PLANS = { PRO: 'pro', TEAM: 'team' };
 const norm = k => String(k || '').replace(/\s+/g, '');

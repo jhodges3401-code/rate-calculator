@@ -104,6 +104,6 @@ $('#iCsv').onchange = err(async ev => { const f = ev.target.files[0]; if (!f) re
   if ($('#impGo')) $('#impGo').onclick = err(() => { const r = I.applyImport(S, PV); PV = null; $('#impPrev').innerHTML = `<p class=muted>Imported ${r.entries} entries (${r.clients} new clients, ${r.projects} new projects). Invoiced rows were added as non-billable.</p>`; save(); });
   $('#impCancel').onclick = () => { PV = null; $('#impPrev').innerHTML = ''; }; });
 // Buy buttons: one place to swap (L.BUY_URL). Until the Gumroad product exists they explain instead of linking nowhere.
-$$('[data-buy]').forEach(a => { if (L.BUY_URL) { a.href = L.BUY_URL; a.target = '_blank'; a.rel = 'noopener'; } else { a.removeAttribute('target'); a.onclick = ev => { ev.preventDefault(); alert('Pro checkout opens soon. Everything in the free plan works today, and your data will carry over when you unlock Pro.'); }; } });
+$$('[data-buy]').forEach(a => { const u = a.hasAttribute('data-team') ? L.TEAM_URL : L.BUY_URL; if (u) { a.href = u; a.target = '_blank'; a.rel = 'noopener'; } else { a.removeAttribute('target'); a.onclick = ev => { ev.preventDefault(); alert('Pro checkout opens soon. Everything in the free plan works today, and your data will carry over when you unlock Pro.'); }; } });
 render();
 L.recheck(S).then(p => { D.save(localStorage, S); render(); });
