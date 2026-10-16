@@ -1,0 +1,31 @@
+:root{--ink:#0f172a;--mute:#475569;--line:#e2e8f0;--acc:#0f766e;--bg:#f8fafc}
+*{box-sizing:border-box}body{margin:0;font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+.om-in{max-width:1040px;margin:0 auto;padding:0 20px}
+.om-bar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.om-bar .om-in{display:flex;align-items:center;justify-content:space-between;height:56px;gap:12px}
+.om-logo{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-weight:700}
+.om-mark{width:26px;height:26px;border-radius:7px;background:var(--acc);color:#fff;display:grid;place-items:center;font-size:14px}
+.om-by{color:var(--mute);font-weight:500;font-size:13px}.pill{font-size:12px;color:var(--acc);background:#f0fdfa;border:1px solid #99f6e4;padding:3px 10px;border-radius:999px}
+.hero{background:radial-gradient(900px 300px at 85% -20%,#ccfbf1 0,transparent 60%),#fff;border-bottom:1px solid var(--line);padding:40px 0 30px}
+.eb{color:var(--acc);font-weight:650;font-size:13px;margin:0 0 8px}h1{font-size:clamp(26px,4vw,38px);letter-spacing:-.03em;line-height:1.1;margin:0 0 10px}.lead{color:var(--mute);margin:0;max-width:640px;font-size:16px}
+main{padding-top:22px}.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:18px}
+h2{font-size:16px;margin:18px 0 10px}h2:first-child{margin-top:0}.muted{color:var(--mute);font-size:14px}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:10px}
+input,select{font:inherit;padding:9px 11px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;color:var(--ink);min-width:0}
+input:focus,select:focus,button:focus-visible{outline:3px solid #5eead4;outline-offset:1px}
+.b1,.b2{font:inherit;font-weight:650;border-radius:9px;padding:9px 16px;cursor:pointer;border:1px solid transparent}
+.b1{background:var(--acc);color:#fff}.b1:hover{background:#115e59}.b2{background:#fff;border-color:var(--line);color:var(--ink)}.b2:hover{border-color:#94a3b8}
+.b1.stop{background:#dc2626}.file{display:inline-block}.ck{display:flex;gap:6px;align-items:center}
+.timerbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.timerbar input{flex:1;min-width:180px}
+.clock{font:700 22px/1 ui-monospace,Menlo,Consolas,monospace;min-width:110px;text-align:center}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}.tabs button{font:inherit;font-weight:600;background:none;border:0;padding:8px 14px;border-radius:9px;color:var(--mute);cursor:pointer}.tabs button.on{background:var(--ink);color:#fff}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line)}th{color:var(--mute);font-weight:600}td.n,th.n{text-align:right}
+.tag{font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px}.paid{background:#dcfce7;color:#166534}.unpaid{background:#fef3c7;color:#92400e}.overdue{background:#fee2e2;color:#991b1b}
+.link{background:none;border:0;color:var(--acc);font:inherit;font-weight:600;cursor:pointer;padding:2px 4px}
+.foot{color:var(--mute);font-size:13px;text-align:center;margin:28px 0}
+.doc{position:fixed;inset:0;background:rgba(15,23,42,.5);overflow:auto;z-index:50;padding:30px 12px}
+.sheet{background:#fff;max-width:780px;margin:0 auto;border-radius:10px;padding:48px;box-shadow:0 20px 50px rgba(0,0,0,.3)}
+.sheet .top{display:flex;justify-content:space-between;gap:20px}.sheet h3{font-size:28px;margin:0;letter-spacing:-.02em}.sheet .tot{margin-left:auto;width:280px}.sheet .tot td{border:0;padding:4px 8px}.sheet .grand td{font-weight:800;font-size:18px;border-top:2px solid var(--ink)}
+.actions{max-width:780px;margin:0 auto 12px;display:flex;gap:10px;justify-content:flex-end}
+@media print{body{background:#fff}.om-bar,.hero,main,.actions{display:none!important}.doc{position:static;background:none;padding:0}.sheet{box-shadow:none;padding:0}}
+@media(max-width:640px){.sheet{padding:22px}.sheet .top{flex-direction:column}}

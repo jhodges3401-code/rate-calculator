@@ -1,0 +1,55 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Proposeroo Desk: quotes, time & invoices in your browser (preview) | Orvian Market</title>
+<meta name="description" content="Track time, send quotes and invoices, and get paid. Local-first, no account, pay once.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f766e'/%3E%3Ctext x='32' y='44' font-family='Arial' font-size='36' font-weight='700' fill='%23fff' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="om-bar"><div class="om-in"><a class="om-logo" href="./"><span class="om-mark">P</span>Proposeroo Desk <span class="om-by">by Orvian Market</span></a><span class="pill">Preview · data stays in this browser</span></div></div>
+<div class="hero"><div class="om-in"><p class="eb">Quotes · Time · Invoices</p><h1>Track the time. Send the invoice. Get paid.</h1>
+<p class="lead">Everything runs in your browser on Windows, Mac or Chromebook. No account, no subscription, and nothing leaves your device unless you export it.</p></div></div>
+<main class="om-in">
+<div class="timerbar card" aria-live="polite">
+  <select id="tProject" aria-label="Project"></select><input id="tNote" placeholder="What are you working on?" aria-label="Note">
+  <span id="tClock" class="clock">00:00:00</span><button id="tBtn" class="b1">Start</button>
+</div>
+<nav class="tabs" role="tablist">
+  <button data-tab="time" class="on">Time</button><button data-tab="invoices">Invoices</button><button data-tab="quotes">Quotes</button><button data-tab="clients">Clients &amp; projects</button><button data-tab="data">Settings &amp; data</button>
+</nav>
+
+<section id="time" class="tab card">
+  <h2>Add time manually</h2>
+  <form id="eForm" class="row"><select name="projectId" aria-label="Project" required></select><input name="date" type="date" required aria-label="Date"><input name="hours" type="number" min="0.01" step="0.01" placeholder="Hours e.g. 1.5" required aria-label="Hours"><input name="note" placeholder="Note" aria-label="Note"><label class="ck"><input name="billable" type="checkbox" checked> Billable</label><button class="b1">Add</button></form>
+  <h2>Time entries</h2><div id="entries"></div>
+</section>
+
+<section id="invoices" class="tab card" hidden>
+  <h2>Invoice unbilled time</h2>
+  <form id="iForm" class="row"><select name="clientId" aria-label="Client" required></select><label>From <input name="from" type="date"></label><label>To <input name="to" type="date"></label><input name="taxPct" type="number" min="0" step="0.01" placeholder="Tax %" aria-label="Tax percent"><button class="b1">Create invoice</button></form>
+  <p id="unbilledHint" class="muted"></p>
+  <h2>Invoices</h2><div id="invList"></div>
+</section>
+
+<section id="quotes" class="tab card" hidden>
+  <h2>New quote</h2>
+  <form id="qForm"><div class="row"><select name="clientId" aria-label="Client" required></select><input name="taxPct" type="number" min="0" step="0.01" placeholder="Tax %" aria-label="Tax percent"></div>
+  <div id="qItems"></div><div class="row"><button type="button" id="qAdd" class="b2">+ Line item</button><button class="b1">Save quote</button></div></form>
+  <h2>Quotes</h2><div id="qList"></div>
+</section>
+
+<section id="clients" class="tab card" hidden>
+  <h2>Add client</h2><form id="cForm" class="row"><input name="name" placeholder="Client name" required aria-label="Client name"><input name="email" type="email" placeholder="Email" aria-label="Email"><input name="address" placeholder="Address" aria-label="Address"><button class="b1">Add client</button></form>
+  <h2>Add project</h2><form id="pForm" class="row"><select name="clientId" aria-label="Client" required></select><input name="name" placeholder="Project name" required aria-label="Project name"><input name="rate" type="number" min="0" step="0.01" placeholder="Hourly rate" required aria-label="Hourly rate"><button class="b1">Add project</button></form>
+  <div id="cList"></div>
+</section>
+
+<section id="data" class="tab card" hidden>
+  <h2>Your business</h2><form id="sForm" class="row"><input name="business" placeholder="Business name" aria-label="Business name"><input name="email" placeholder="Email" aria-label="Business email"><input name="address" placeholder="Address" aria-label="Business address"><select name="currency" aria-label="Currency"><option>USD</option><option>EUR</option><option>GBP</option><option>CAD</option><option>AUD</option></select><input name="taxPct" type="number" min="0" step="0.01" placeholder="Default tax %" aria-label="Default tax"><button class="b1">Save</button></form>
+  <h2>Export &amp; backup</h2><p class="muted">Your data lives only in this browser. Export a backup regularly.</p>
+  <div class="row"><button id="xJson" class="b2">Download backup (JSON)</button><button id="xEntries" class="b2">Time entries (CSV)</button><button id="xInv" class="b2">Invoices (CSV)</button><label class="b2 file">Restore backup<input id="iJson" type="file" accept=".json,application/json" hidden></label><button id="demo" class="b2">Load sample data</button></div>
+</section>
+<p class="foot">© 2026 Orvian Market · Independent software. Not affiliated with any other time-tracking or invoicing product.</p>
+</main>
+<div id="doc" class="doc" hidden></div>
+<script type="module" src="app.js"></script>
+</body></html>
