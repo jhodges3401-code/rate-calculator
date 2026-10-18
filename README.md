@@ -1,2 +1,2 @@
 # rate-calculator
-Free freelance rate &amp; quote calculator: hourly/day rate, project quote, and a ready-to-paste rate-increase email. Single-page, no tracking.
+Free freelance rate &amp; quote calculator: hourly/day rate, project quote, and a ready-to-paste rate-increase email. Single-page; inputs stay in your browser. The live site uses Google Analytics for visit stats.
