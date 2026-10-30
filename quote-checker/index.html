@@ -1,7 +1,7 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F3QH6E9QR7"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F3QH6E9QR7');
+<!-- GA4 loads only after consent: /assets/consent.js -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){var t=arguments[0];if(t==='event'&&!window.__omConsent)return;dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});gtag('js',new Date());gtag('config','G-F3QH6E9QR7');
 document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href*="gumroad.com"]'):null;if(!a)return;var m=a.href.match(/\/l\/([^\/?#]+)/),s=m?m[1]:'';var N={"answerloft":"Answerloft","bcmhvk":"Okayline","bjkyj":"Thumbtally","ekunvc":"Proposeroo Team","ijsmuq":"PeelPixel Pro","kzjcwp":"Proposeroo Pro","lyrgdx":"Rate Calculator Spreadsheet","pckinc":"Rate-Raise Email Rewrite","kudoshelf":"Kudoshelf","proposeroo-desk":"Proposeroo Desk","proposeroo-desk-team":"Proposeroo Desk Team","ctitql":"Freelance Rate Pack","jtocar":"Client OS","vwxgu":"Prompt Pack","oellyq":"Budget Template","bffum":"Rate Mini (free)","mceana":"Freelancer Toolkit Bundle","nqpwfg":"Raise Emails (free)"};gtag('event','buy_click',{product_name:a.getAttribute('data-product')||N[s]||s||'gumroad',product_slug:s,link_url:a.href,link_text:(a.textContent||'').trim().slice(0,80),transport_type:'beacon'});},true);</script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Free Quote Checker for Freelancers: is this quote above your minimum rate? | Orvian Market</title><meta property="og:image" content="https://orvianmarketplace.com/rate-calculator/quote-checker/assets/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Free Quote Checker for Freelancers: is this quote above your minimum rate? | Orvian Market"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://orvianmarketplace.com/rate-calculator/quote-checker/assets/og.png">
@@ -110,4 +110,5 @@ footer{padding:26px 0 40px;color:#64748b;font-size:13px}footer a{color:inherit}
 <footer><div class="w">© 2026 Orvian Market · Independent software, not affiliated with any other brand. · More free tools: <a href="../">Rate Calculator</a> · <a href="https://orvianmarketplace.com/proposeroo/">Proposeroo quote maker</a> · <a href="https://orvianmarketplace.com/rate-calculator/desk/">Proposeroo Desk</a>
 <img src="https://visitor-badge.laobi.icu/badge?page_id=orvian.quotechecker&amp;left_text=views" alt="" width="1" height="1" loading="lazy" referrerpolicy="no-referrer" style="opacity:0;position:absolute"></div></footer>
 <script type="module" src="app.js"></script>
+<script src="/assets/consent.js" defer></script>
 </body></html>
